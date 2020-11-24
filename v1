@@ -8,40 +8,33 @@ class CepInfo:
         url = 'https://viacep.com.br/ws/'+cep+'/json/'
         r = requests.get(url).text
         info = json.loads(r)
+        return info
+        
 
     def logradouro(self, cep):
         self.cep = cep
-        url = 'https://viacep.com.br/ws/'+cep+'/json/'
-        r = requests.get(url).text
-        info = json.loads(r)
+        info = self.get_cep(cep)
         print(info.get('logradouro'))
+
 
     def complemento(self, cep):
         self.cep = cep
-        url = 'https://viacep.com.br/ws/'+cep+'/json/'
-        r = requests.get(url).text
-        info = json.loads(r)
+        info = self.get_cep(cep)
         print(info.get('complemento'))
 
     def bairro(self, cep):
         self.cep = cep
-        url = 'https://viacep.com.br/ws/'+cep+'/json/'
-        r = requests.get(url).text
-        info = json.loads(r)
+        info = self.get_cep(cep)
         print(info.get('bairro'))
 
     def cidade(self, cep):
         self.cep = cep
-        url = 'https://viacep.com.br/ws/'+cep+'/json/'
-        r = requests.get(url).text
-        info = json.loads(r)
+        info = self.get_cep(cep)
         print(info.get('cidade'))
 
     def uf(self, cep):
         self.cep = cep
-        url = 'https://viacep.com.br/ws/'+cep+'/json/'
-        r = requests.get(url).text
-        info = json.loads(r)
+        info = self.get_cep(cep)
         print(info.get('uf'))
         
 get = CepInfo()
