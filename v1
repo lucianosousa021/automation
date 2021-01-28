@@ -14,27 +14,27 @@ class CepInfo:
     def logradouro(self, cep):
         self.cep = cep
         info = self.get_cep(cep)
-        print(info.get('logradouro'))
+        return info.get('logradouro')
 
 
     def complemento(self, cep):
         self.cep = cep
         info = self.get_cep(cep)
-        print(info.get('complemento'))
+        return info.get('complemento')
 
     def bairro(self, cep):
         self.cep = cep
         info = self.get_cep(cep)
-        print(info.get('bairro'))
+        return info.get('bairro')
 
     def cidade(self, cep):
         self.cep = cep
         info = self.get_cep(cep)
-        print(info.get('cidade'))
+        return info.get('cidade')
 
     def uf(self, cep):
         self.cep = cep
         info = self.get_cep(cep)
-        print(info.get('uf'))
+        return info.get('uf')
         
 get = CepInfo()
